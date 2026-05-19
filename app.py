@@ -99,7 +99,10 @@ if st.sidebar.button("Generate Plan"):
         target_calories,
         macros["protein"],
         macros["carbs"],
-        macros["fat"]
+        macros["fat"],
+        diet_recommendation=diet_recommendation,
+        allergies=[],
+        preferred_cuisine="Any"
     )
 
     plan_calories = meal_plan["Calories"].sum()

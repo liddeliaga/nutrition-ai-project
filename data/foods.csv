@@ -1,0 +1,149 @@
+food_id,food_name,meal_type,calories,protein,carbs,fat,serving_size,category,suitable_diets,not_suitable_for,allergens,cuisine
+1,Oatmeal,breakfast,370,13,60,7,100g,grain,Balanced|Diabetic_Friendly|Heart_Healthy,Low_Carb,Gluten,Western
+2,Boiled Egg,breakfast,78,6,0.6,5,1 piece,protein,Balanced|Low_Carb|High_Protein|Keto,Vegan,Egg,Any
+3,Scrambled Eggs,breakfast,150,10,1.5,11,2 eggs,protein,Balanced|Low_Carb|High_Protein|Keto,Vegan,Egg|Milk,Western
+4,Menemen,breakfast,120,6,7,8,100g,protein,Balanced|Low_Carb|Mediterranean,Vegan,Egg,Turkish
+5,Whole Wheat Bread,breakfast,247,13,41,4.2,100g,grain,Balanced|Heart_Healthy,Low_Carb|Keto|Gluten_Free,Gluten,Any
+6,White Cheese,breakfast,264,17,4,21,100g,dairy,Balanced|Low_Carb|High_Protein|Mediterranean,Vegan|Low_Sodium,Milk,Turkish
+7,Cottage Cheese,breakfast,98,11,3.4,4.3,100g,dairy,Balanced|Low_Carb|High_Protein,Vegan,Milk,Western
+8,Avocado Toast,breakfast,220,6,24,12,1 slice,fat,Balanced|Heart_Healthy|Mediterranean,Low_Carb|Keto,Gluten,Western
+9,Peanut Butter Toast,breakfast,260,10,28,13,1 slice,fat,Balanced|High_Calorie,Low_Carb|Nut_Allergy,Peanuts|Gluten,Western
+10,Pancake,breakfast,227,6,28,10,100g,dessert,Balanced,Diabetic_Friendly|Low_Carb|Keto,Gluten|Egg|Milk,Western
+11,Granola,breakfast,471,10,64,20,100g,grain,Balanced|High_Calorie,Low_Carb|Diabetic_Friendly,Gluten|Nuts,Western
+12,Cornflakes,breakfast,357,8,84,0.4,100g,grain,Balanced,Low_Carb|Diabetic_Friendly,Gluten,Western
+13,Greek Yogurt With Berries,breakfast,95,9,10,1.5,100g,dairy,Balanced|High_Protein|Mediterranean,Vegan,Milk,Mediterranean
+14,Simit,breakfast,430,12,70,12,1 piece,grain,Balanced|High_Calorie,Low_Carb|Keto|Diabetic_Friendly|Gluten_Free,Gluten|Sesame,Turkish
+15,Sucuklu Egg,breakfast,250,15,2,20,100g,protein,Low_Carb|High_Protein|Keto,Low_Sodium|Heart_Healthy|Vegan,Egg,Turkish
+16,Tahini Molasses,breakfast,450,9,50,25,100g,fat,High_Calorie|Vegan,Diabetic_Friendly|Low_Carb|Keto,Sesame,Turkish
+17,Fruit Smoothie,breakfast,110,3,21,1.5,100ml,beverage,Balanced|Vegetarian,Low_Carb|Keto|Diabetic_Friendly,Milk,Any
+18,Protein Smoothie,breakfast,130,15,10,3,100ml,beverage,Balanced|High_Protein,Vegan,Milk,Western
+19,Chia Pudding,breakfast,160,5,13,9,100g,seed,Balanced|Heart_Healthy|Vegan,Low_Carb,None,Western
+20,Muesli,breakfast,350,11,62,7,100g,grain,Balanced|Heart_Healthy,Low_Carb|Keto,Gluten|Nuts,Western
+21,Chicken Breast,lunch_dinner,165,31,0,3.6,100g,protein,Balanced|Low_Carb|High_Protein|Diabetic_Friendly,Vegan,None,Any
+22,Grilled Turkey,lunch_dinner,135,29,0,1.5,100g,protein,Balanced|Low_Carb|High_Protein|Diabetic_Friendly,Vegan,None,Western
+23,Lean Beef,lunch_dinner,217,26,0,12,100g,protein,Balanced|Low_Carb|High_Protein|Keto,Vegan|Heart_Healthy,None,Any
+24,Beef Steak,dinner,271,25,0,19,100g,protein,Low_Carb|High_Protein|Keto,Vegan|Heart_Healthy,None,Western
+25,Meatballs,lunch_dinner,250,18,8,17,100g,protein,Balanced|High_Protein,Vegan|Low_Sodium,Gluten|Egg,Turkish
+26,Lamb Kebab,dinner,294,25,0,21,100g,protein,Low_Carb|High_Protein|Keto,Vegan|Heart_Healthy,None,Turkish
+27,Salmon,dinner,208,20,0,13,100g,protein,Balanced|Low_Carb|Heart_Healthy|High_Protein,Vegan,Fish,Western
+28,Tuna,lunch_dinner,132,28,0,1,100g,protein,Balanced|Low_Carb|High_Protein|Diabetic_Friendly,Vegan,Fish,Any
+29,Sea Bass,dinner,124,24,0,2.6,100g,protein,Balanced|Low_Carb|Heart_Healthy|High_Protein,Vegan,Fish,Mediterranean
+30,Shrimp,lunch_dinner,99,24,0.2,0.3,100g,protein,Balanced|Low_Carb|High_Protein,Vegan,Shellfish,Mediterranean
+31,Tofu,lunch_dinner,76,8,1.9,4.8,100g,soy,Balanced|Low_Carb|Vegan|Vegetarian,Soy_Allergy,Soy,Asian
+32,Tempeh,lunch_dinner,193,19,9,11,100g,soy,Balanced|High_Protein|Vegan|Vegetarian,Soy_Allergy,Soy,Asian
+33,Seitan,lunch_dinner,370,75,14,1.9,100g,protein,High_Protein|Vegan|Vegetarian,Gluten_Free|Celiac,Gluten,Asian
+34,Chickpea Patties,lunch_dinner,180,8,25,6,100g,legume,Balanced|Vegan|Vegetarian|Heart_Healthy,Low_Carb|Keto,None,Mediterranean
+35,Falafel,lunch_dinner,333,13,32,18,100g,legume,Vegan|Vegetarian|High_Calorie,Low_Carb|Keto,Sesame,Middle_Eastern
+36,Eggplant Kebab,lunch_dinner,160,8,9,11,100g,vegetable,Balanced|Mediterranean,Low_Fat|Vegan,None,Turkish
+37,Chicken Doner,lunch_dinner,215,22,3,13,100g,protein,Balanced|High_Protein|Low_Carb,Vegan|Low_Sodium,None,Turkish
+38,Beef Doner,lunch_dinner,280,20,2,22,100g,protein,Low_Carb|High_Protein,Vegan|Heart_Healthy|Low_Sodium,None,Turkish
+39,Grilled Chicken Thigh,lunch_dinner,209,26,0,11,100g,protein,Balanced|Low_Carb|High_Protein|Keto,Vegan,None,Any
+40,Chicken Soup,lunch,80,7,7,3,100g,soup,Balanced|Low_Calorie,Vegan,Gluten,Turkish
+41,Brown Rice,lunch_dinner,123,2.7,25.6,1,100g,grain,Balanced|Diabetic_Friendly,Low_Carb|Keto,None,Asian
+42,White Rice,lunch_dinner,130,2.4,28,0.3,100g,grain,Balanced,Low_Carb|Keto|Diabetic_Friendly,None,Any
+43,Bulgur Pilaf,lunch_dinner,151,4,33,0.4,100g,grain,Balanced|Heart_Healthy|Diabetic_Friendly,Low_Carb|Keto|Gluten_Free,Gluten,Turkish
+44,Pasta,lunch_dinner,158,5.8,30.9,0.9,100g,grain,Balanced,Low_Carb|Keto|Diabetic_Friendly|Gluten_Free,Gluten,Italian
+45,Whole Wheat Pasta,lunch_dinner,148,5.9,30,1.1,100g,grain,Balanced|Heart_Healthy,Low_Carb|Keto|Gluten_Free,Gluten,Italian
+46,Quinoa,lunch_dinner,120,4.4,21.3,1.9,100g,grain,Balanced|Gluten_Free|Heart_Healthy|Vegan,Low_Carb|Keto,None,South_American
+47,Couscous,lunch_dinner,112,3.8,23,0.2,100g,grain,Balanced,Low_Carb|Keto|Gluten_Free,Gluten,Mediterranean
+48,Potato Boiled,lunch_dinner,87,1.9,20.1,0.1,100g,starch,Balanced|Low_Fat|Vegan,Low_Carb|Keto|Diabetic_Friendly,None,Any
+49,Sweet Potato,lunch_dinner,86,1.6,20,0.1,100g,starch,Balanced|Heart_Healthy|Vegan,Low_Carb|Keto,None,Any
+50,Lavash,lunch_dinner,280,9,55,3,100g,grain,Balanced,Low_Carb|Keto|Gluten_Free,Gluten,Turkish
+51,Pita Bread,lunch_dinner,275,9,56,1.2,100g,grain,Balanced,Low_Carb|Keto|Gluten_Free,Gluten,Mediterranean
+52,Noodle,lunch_dinner,138,4.5,25,2.1,100g,grain,Balanced,Low_Carb|Keto|Gluten_Free,Gluten|Egg,Asian
+53,Lentil Soup,lunch,116,9,20,0.4,100g,legume,Balanced|Heart_Healthy|Vegan|Vegetarian,Low_Carb|Keto,None,Turkish
+54,Ezogelin Soup,lunch,95,4,16,2,100g,soup,Balanced|Vegan|Vegetarian,Low_Carb|Keto|Gluten_Free,Gluten,Turkish
+55,Tomato Soup,lunch,42,1.4,7,1.5,100g,soup,Balanced|Low_Calorie|Vegetarian,Low_Carb|Keto,Milk,Western
+56,Yogurt Soup,lunch,70,3.5,8,2.5,100g,soup,Balanced|Vegetarian,Vegan,Milk|Gluten,Turkish
+57,Chickpea Stew,lunch_dinner,164,8.9,27,2.6,100g,legume,Balanced|Vegan|Heart_Healthy,Low_Carb|Keto,None,Turkish
+58,White Bean Stew,lunch_dinner,155,8,26,2,100g,legume,Balanced|Vegan|Heart_Healthy,Low_Carb|Keto,None,Turkish
+59,Green Lentil Stew,lunch_dinner,120,9,20,1.5,100g,legume,Balanced|Vegan|Heart_Healthy|Diabetic_Friendly,Low_Carb|Keto,None,Turkish
+60,Red Kidney Beans,lunch_dinner,127,8.7,22.8,0.5,100g,legume,Balanced|Vegan|Heart_Healthy,Low_Carb|Keto,None,Mediterranean
+61,Hummus,snack,166,8,14,10,100g,legume,Balanced|Vegan|Heart_Healthy|Mediterranean,Low_Carb|Keto,Sesame,Middle_Eastern
+62,Mercimek Kofte,snack,180,7,30,4,100g,legume,Balanced|Vegan|Vegetarian,Low_Carb|Keto|Gluten_Free,Gluten,Turkish
+63,Green Salad,lunch_dinner,40,2,7,0.5,1 bowl,vegetable,Balanced|Low_Carb|Low_Sodium|Diabetic_Friendly|Vegan,None,None,Any
+64,Caesar Salad,lunch,180,8,9,14,1 bowl,salad,Balanced|Low_Carb,Vegan|Low_Fat,Milk|Egg|Fish|Gluten,Western
+65,Shepherd Salad,lunch_dinner,55,2,8,2,1 bowl,vegetable,Balanced|Low_Carb|Low_Calorie|Vegan|Mediterranean,None,None,Turkish
+66,Roasted Vegetables,lunch_dinner,90,2,12,4,100g,vegetable,Balanced|Low_Calorie|Vegan|Mediterranean,Keto,None,Mediterranean
+67,Steamed Broccoli,lunch_dinner,35,2.4,7.2,0.4,100g,vegetable,Balanced|Low_Carb|Low_Calorie|Diabetic_Friendly|Vegan,None,None,Any
+68,Spinach With Yogurt,lunch_dinner,85,5,7,4,100g,vegetable,Balanced|Low_Carb|Vegetarian,Vegan,Milk,Turkish
+69,Zucchini Dish,lunch_dinner,70,2,10,3,100g,vegetable,Balanced|Low_Calorie|Vegan|Mediterranean,Keto,None,Turkish
+70,Stuffed Peppers,lunch_dinner,140,4,20,5,100g,vegetable,Balanced|Mediterranean,Low_Carb|Keto,None,Turkish
+71,Imam Bayildi,lunch_dinner,150,2,10,11,100g,vegetable,Balanced|Vegan|Mediterranean,Low_Fat,None,Turkish
+72,Kisir,lunch,180,5,32,4,100g,grain,Balanced|Vegan|Mediterranean,Low_Carb|Keto|Gluten_Free,Gluten,Turkish
+73,Tabbouleh,lunch,120,3,20,3,100g,grain,Balanced|Vegan|Mediterranean,Low_Carb|Keto|Gluten_Free,Gluten,Middle_Eastern
+74,Coleslaw,side,150,1,10,12,100g,vegetable,Balanced|Vegetarian,Low_Fat|Vegan,Egg,Western
+75,Cucumber Yogurt,side,60,3,4,3,100g,dairy,Balanced|Low_Carb|Vegetarian|Mediterranean,Vegan,Milk,Turkish
+76,Pickles,side,12,0.5,2,0.1,100g,vegetable,Low_Calorie|Vegan,Low_Sodium|High_Blood_Pressure,None,Any
+77,Greek Yogurt,snack,90,10,4,0.5,100g,dairy,Balanced|High_Protein,Vegan,Milk,Mediterranean
+78,Plain Yogurt,snack,61,3.5,4.7,3.3,100g,dairy,Balanced|Vegetarian,Vegan,Milk,Any
+79,Kefir,snack,64,3.3,4.8,3.5,100ml,dairy,Balanced|Vegetarian,Vegan,Milk,Any
+80,Ayran,snack,37,2,2.5,2,100ml,dairy,Balanced|Vegetarian,Vegan|Low_Sodium,Milk,Turkish
+81,Milk,snack,61,3.2,4.8,3.3,100ml,dairy,Balanced|Vegetarian,Vegan,Milk,Any
+82,Protein Bar,snack,350,25,35,12,100g,snack,High_Protein|Balanced,Vegan|Diabetic_Friendly,Milk|Soy|Nuts,Western
+83,Cheese Stick,snack,300,20,2,24,100g,dairy,Low_Carb|High_Protein|Keto,Vegan|Low_Sodium,Milk,Western
+84,Dark Chocolate,snack,546,4.9,61,31,100g,dessert,Balanced|Vegetarian,Low_Calorie|Diabetic_Friendly|Low_Fat,Milk,Western
+85,Rice Cake,snack,387,8,81,3,100g,snack,Low_Fat|Gluten_Free|Vegan,Low_Carb|Keto|Diabetic_Friendly,None,Any
+86,Popcorn Air Popped,snack,387,13,78,4.5,100g,snack,Balanced|High_Fiber|Vegan,Low_Carb|Keto,None,Western
+87,Banana,snack,89,1.1,23,0.3,100g,fruit,Balanced|Vegan,Low_Carb|Keto,None,Any
+88,Apple,snack,52,0.3,14,0.2,100g,fruit,Balanced|Low_Calorie|Vegan|Heart_Healthy,Keto,None,Any
+89,Orange,snack,47,0.9,12,0.1,100g,fruit,Balanced|Low_Calorie|Vegan,Keto,None,Any
+90,Strawberry,snack,32,0.7,7.7,0.3,100g,fruit,Balanced|Low_Calorie|Diabetic_Friendly|Vegan,Keto,None,Any
+91,Blueberry,snack,57,0.7,14.5,0.3,100g,fruit,Balanced|Heart_Healthy|Vegan,Keto,None,Any
+92,Grapes,snack,69,0.7,18,0.2,100g,fruit,Balanced|Vegan,Low_Carb|Keto|Diabetic_Friendly,None,Any
+93,Watermelon,snack,30,0.6,7.6,0.2,100g,fruit,Balanced|Low_Calorie|Vegan,Keto,None,Any
+94,Dates,snack,282,2.5,75,0.4,100g,fruit,Vegan|High_Calorie,Diabetic_Friendly|Low_Carb|Keto,None,Middle_Eastern
+95,Almonds,snack,579,21,22,50,100g,fat,Balanced|Low_Carb|Heart_Healthy|Keto,Nut_Allergy,Nuts,Any
+96,Walnuts,snack,654,15,14,65,100g,fat,Low_Carb|Heart_Healthy|Keto|Vegan,Nut_Allergy|Low_Calorie,Nuts,Any
+97,Hazelnuts,snack,628,15,17,61,100g,fat,Low_Carb|Heart_Healthy|Keto|Vegan,Nut_Allergy|Low_Calorie,Nuts,Turkish
+98,Pistachios,snack,562,20,28,45,100g,fat,Balanced|Heart_Healthy|Vegan,Nut_Allergy|Low_Calorie,Nuts,Middle_Eastern
+99,Sunflower Seeds,snack,584,21,20,51,100g,seed,Low_Carb|Heart_Healthy|Vegan,Low_Calorie,Seeds,Any
+100,Pumpkin Seeds,snack,559,30,11,49,100g,seed,Low_Carb|High_Protein|Heart_Healthy|Vegan,Low_Calorie,Seeds,Any
+101,Dried Apricot,snack,241,3.4,63,0.5,100g,fruit,Balanced|Vegan,Diabetic_Friendly|Low_Carb|Keto,Sulfite,Turkish
+102,Chicken Wrap,lunch,230,17,24,8,100g,mixed,Balanced|High_Protein,Low_Carb|Keto|Gluten_Free,Gluten,Western
+103,Tuna Sandwich,lunch,220,15,25,7,100g,mixed,Balanced|High_Protein,Low_Carb|Keto|Gluten_Free,Fish|Gluten|Egg,Western
+104,Vegetable Sandwich,lunch,180,6,30,5,100g,mixed,Balanced|Vegetarian,Low_Carb|Keto|Gluten_Free,Gluten,Western
+105,Chicken Salad Bowl,lunch,140,18,6,5,100g,mixed,Balanced|Low_Carb|High_Protein|Diabetic_Friendly,Vegan,None,Western
+106,Buddha Bowl,lunch,170,7,24,6,100g,mixed,Balanced|Vegan|Heart_Healthy,Low_Carb|Keto,None,Western
+107,Sushi Roll,lunch_dinner,145,6,28,1.5,100g,mixed,Balanced,Low_Carb|Keto,Fish|Soy,Japanese
+108,Chicken Curry,lunch_dinner,180,14,10,10,100g,mixed,Balanced|High_Protein,Vegan,Milk,Indian
+109,Vegetable Curry,lunch_dinner,120,4,15,5,100g,mixed,Balanced|Vegan|Vegetarian,Keto,None,Indian
+110,Beef Stir Fry,lunch_dinner,200,18,8,11,100g,mixed,Balanced|Low_Carb|High_Protein,Vegan,Soy,Asian
+111,Chicken Stir Fry,lunch_dinner,160,20,7,6,100g,mixed,Balanced|Low_Carb|High_Protein,Vegan,Soy,Asian
+112,Pizza Margherita,lunch_dinner,266,11,33,10,100g,mixed,Balanced|Vegetarian,Low_Carb|Keto|Gluten_Free,Gluten|Milk,Italian
+113,Hamburger,lunch_dinner,295,17,30,12,100g,mixed,High_Calorie|High_Protein,Heart_Healthy|Low_Sodium|Low_Carb,Gluten|Egg|Milk,American
+114,Cheeseburger,lunch_dinner,305,18,28,15,100g,mixed,High_Calorie|High_Protein,Heart_Healthy|Low_Sodium|Low_Carb,Gluten|Milk,American
+115,French Fries,side,312,3.4,41,15,100g,starch,Vegan|High_Calorie,Low_Fat|Diabetic_Friendly|Heart_Healthy,None,Western
+116,Lahmacun,lunch_dinner,230,11,28,8,1 piece,mixed,Balanced,Low_Carb|Keto|Gluten_Free,Gluten,Turkish
+117,Pide With Cheese,lunch_dinner,280,13,34,11,100g,mixed,Balanced|Vegetarian,Low_Carb|Keto|Gluten_Free,Gluten|Milk,Turkish
+118,Manti,lunch_dinner,210,10,25,8,100g,mixed,Balanced,Low_Carb|Keto|Gluten_Free,Gluten|Milk|Egg,Turkish
+119,Borek,breakfast,330,9,35,18,100g,pastry,Balanced|High_Calorie,Low_Carb|Keto|Gluten_Free,Gluten|Milk|Egg,Turkish
+120,Gozleme Cheese,lunch,280,11,35,11,100g,pastry,Balanced|Vegetarian,Low_Carb|Keto|Gluten_Free,Gluten|Milk,Turkish
+121,Dolma With Meat,lunch_dinner,160,7,18,7,100g,mixed,Balanced|Mediterranean,Low_Carb|Keto,None,Turkish
+122,Baklava,dessert,430,6,55,22,100g,dessert,High_Calorie|Vegetarian,Diabetic_Friendly|Low_Carb|Keto|Low_Fat,Gluten|Nuts|Milk,Turkish
+123,Rice Pudding,dessert,130,3.5,22,3,100g,dessert,Balanced|Vegetarian,Diabetic_Friendly|Low_Carb|Vegan,Milk,Turkish
+124,Kazandibi,dessert,180,4,30,5,100g,dessert,Vegetarian,Diabetic_Friendly|Low_Carb|Vegan,Milk,Turkish
+125,Ice Cream,dessert,207,3.5,24,11,100g,dessert,Vegetarian,Diabetic_Friendly|Low_Carb|Vegan,Milk,Western
+126,Fruit Salad,dessert,60,0.8,15,0.2,100g,fruit,Balanced|Low_Calorie|Vegan,Keto,None,Any
+127,Honey,breakfast,304,0.3,82,0,100g,sweetener,Vegetarian,Diabetic_Friendly|Low_Carb|Keto|Vegan,None,Any
+128,Olive Oil,side,884,0,0,100,100g,fat,Mediterranean|Heart_Healthy|Vegan|Keto,Low_Calorie|Low_Fat,None,Mediterranean
+129,Black Olives,breakfast,115,0.8,6,11,100g,fat,Low_Carb|Mediterranean|Vegan,Low_Sodium,None,Mediterranean
+130,Green Olives,breakfast,145,1,4,15,100g,fat,Low_Carb|Mediterranean|Vegan,Low_Sodium,None,Mediterranean
+131,Butter,breakfast,717,0.9,0.1,81,100g,fat,Low_Carb|Keto|Vegetarian,Heart_Healthy|Vegan|Low_Fat,Milk,Any
+132,Jam,breakfast,278,0.4,69,0.1,100g,sweetener,Vegetarian|Vegan,Diabetic_Friendly|Low_Carb|Keto,None,Any
+133,Black Coffee,beverage,2,0.3,0,0,1 cup,beverage,Low_Calorie|Low_Carb|Vegan|Keto,Caffeine_Sensitive,None,Any
+134,Turkish Tea,beverage,1,0,0,0,1 cup,beverage,Low_Calorie|Low_Carb|Vegan|Keto,Caffeine_Sensitive,None,Turkish
+135,Orange Juice,beverage,45,0.7,10.4,0.2,100ml,beverage,Balanced|Vegan,Diabetic_Friendly|Low_Carb|Keto,None,Any
+136,Lemonade,beverage,40,0,10,0,100ml,beverage,Vegan,Diabetic_Friendly|Low_Carb|Keto,None,Any
+137,Coke,beverage,42,0,10.6,0,100ml,beverage,Vegan,Diabetic_Friendly|Weight_Loss|Low_Carb|Keto,None,Western
+138,Diet Coke,beverage,1,0,0,0,100ml,beverage,Low_Calorie|Low_Carb|Vegan,Caffeine_Sensitive,None,Western
+139,Açai Bowl,breakfast,180,3,35,4,100g,mixed,Balanced|Vegan,Low_Carb|Keto|Diabetic_Friendly,Nuts,South_American
+140,Overnight Oats,breakfast,155,6,26,3.5,100g,grain,Balanced|Heart_Healthy|Vegetarian,Low_Carb|Keto|Gluten_Free,Gluten|Milk,Western
+141,Protein Pancake,breakfast,210,18,18,8,100g,mixed,Balanced|High_Protein,Vegan|Gluten_Free,Egg|Milk|Gluten,Western
+142,Turkey Sandwich,lunch,210,16,26,5,100g,mixed,Balanced|High_Protein,Low_Carb|Keto|Gluten_Free,Gluten,Western
+143,Grilled Cheese Sandwich,lunch,290,12,28,15,100g,mixed,Vegetarian|High_Calorie,Low_Carb|Keto|Heart_Healthy,Gluten|Milk,Western
+144,Vegan Lentil Burger,lunch_dinner,190,10,27,5,100g,mixed,Balanced|Vegan|Vegetarian,Low_Carb|Keto|Gluten_Free,Gluten,Western
+145,Egg Salad,lunch,190,11,2,16,100g,protein,Low_Carb|High_Protein|Keto,Vegan|Low_Fat,Egg,Western
+146,Grilled Halloumi,lunch_dinner,320,22,2,25,100g,dairy,Low_Carb|High_Protein|Vegetarian|Keto,Vegan|Low_Sodium|Low_Fat,Milk,Mediterranean
+147,Mushroom Saute,lunch_dinner,75,3,8,4,100g,vegetable,Balanced|Low_Calorie|Vegan|Low_Carb,None,None,Any
+148,Stuffed Zucchini,lunch_dinner,120,5,16,4,100g,vegetable,Balanced|Mediterranean,Low_Carb|Keto,None,Turkish
