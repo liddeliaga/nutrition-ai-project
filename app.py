@@ -7,6 +7,14 @@ from modules.calorie_calculator import (
     calculate_macros
 )
 
+from modules.ml_model import predict_weight_change
+from modules.meal_planner import generate_meal_plan
+from modules.genetic_algorithm import run_genetic_algorithm
+from modules.visualization import (
+    plot_macro_distribution,
+    plot_target_vs_plan
+)
+
 
 st.set_page_config(
     page_title="AI Nutrition Planner",
@@ -66,6 +74,49 @@ if st.sidebar.button("Generate Plan"):
     target_calories = calculate_target_calories(tdee, goal)
     macros = calculate_macros(target_calories, weight)
 
+    user_data = {
+        "age": age,
+        "gender": gender,
+        "height": height,
+        "current_weight": weight,
+        "daily_calories": target_calories,
+        "activity_level": activity_level,
+        "protein": macros["protein"],
+        "carbs": macros["carbs"],
+        "fat": macros["fat"],
+        "goal": goal
+    }
+
+    predicted_weight_change = predict_weight_change(user_data)
+
+    meal_plan = generate_meal_plan(
+        target_calories,
+        macros["protein"],
+        macros["carbs"],
+        macros["fat"]
+    )
+
+    plan_calories = meal_plan["Calories"].sum()
+    plan_protein = meal_plan["Protein"].sum()
+    plan_carbs = meal_plan["Carbs"].sum()
+    plan_fat = meal_plan["Fat"].sum()
+
+    targets = {
+        "calories": target_calories,
+        "protein": macros["protein"],
+        "carbs": macros["carbs"],
+        "fat": macros["fat"]
+    }
+
+    plan_totals = {
+        "calories": plan_calories,
+        "protein": plan_protein,
+        "carbs": plan_carbs,
+        "fat": plan_fat
+    }
+
+    ga_result = run_genetic_algorithm(targets)
+
     st.subheader("Calorie and Macro Results")
 
     col1, col2, col3 = st.columns(3)
@@ -91,6 +142,61 @@ if st.sidebar.button("Generate Plan"):
 
     with col6:
         st.metric("Fat", f"{macros['fat']} g")
+
+    st.subheader("Machine Learning Prediction")
+    st.metric(
+        "Predicted Weekly Weight Change",
+        f"{predicted_weight_change:.2f} kg"
+    )
+
+    st.subheader("Genetic Algorithm Result")
+
+    col7, col8, col9 = st.columns(3)
+
+    with col7:
+        st.metric("Best Fitness", ga_result["best_fitness"])
+
+    with col8:
+        st.metric("Mutation Rate", ga_result["mutation_rate"])
+
+    with col9:
+        st.metric("Population Size", ga_result["population_size"])
+
+    st.subheader("Generated Meal Plan")
+    st.dataframe(meal_plan, use_container_width=True)
+
+    st.subheader("Generated Plan Totals")
+
+    col10, col11, col12, col13 = st.columns(4)
+
+    with col10:
+        st.metric("Plan Calories", f"{plan_calories:.0f} kcal")
+
+    with col11:
+        st.metric("Plan Protein", f"{plan_protein:.1f} g")
+
+    with col12:
+        st.metric("Plan Carbs", f"{plan_carbs:.1f} g")
+
+    with col13:
+        st.metric("Plan Fat", f"{plan_fat:.1f} g")
+
+    st.subheader("Graphs")
+
+    macro_fig = plot_macro_distribution(
+        macros["protein"],
+        macros["carbs"],
+        macros["fat"]
+    )
+
+    st.pyplot(macro_fig)
+
+    calories_fig = plot_target_vs_plan(
+        target_calories,
+        plan_calories
+    )
+
+    st.pyplot(calories_fig)
 
 else:
     st.info("Enter user information from the sidebar and click Generate Plan.")
