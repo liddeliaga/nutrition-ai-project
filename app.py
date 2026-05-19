@@ -43,6 +43,16 @@ gender = st.sidebar.selectbox(
     ["male", "female"]
 )
 
+allergies = st.sidebar.multiselect(
+    "Allergies",
+    ["Milk", "Gluten", "Egg", "Nuts", "Fish", "Soy"]
+)
+
+preferred_cuisine = st.sidebar.selectbox(
+    "Preferred Cuisine",
+    ["Any", "Turkish", "Mediterranean", "Asian", "Western"]
+)
+
 height = st.sidebar.number_input(
     "Height (cm)",
     min_value=100,
@@ -101,9 +111,13 @@ if st.sidebar.button("Generate Plan"):
         macros["carbs"],
         macros["fat"],
         diet_recommendation=diet_recommendation,
-        allergies=[],
-        preferred_cuisine="Any"
+        allergies=allergies,
+        preferred_cuisine=preferred_cuisine
     )
+
+    if meal_plan.empty:
+        st.error("No suitable meal plan found for selected filters.")
+        st.stop()
 
     plan_calories = meal_plan["Calories"].sum()
     plan_protein = meal_plan["Protein"].sum()
