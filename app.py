@@ -7,7 +7,7 @@ from modules.calorie_calculator import (
     calculate_macros
 )
 
-from modules.ml_model import predict_weight_change
+from modules.ml_model import predict_weight_change, predict_diet_recommendation
 from modules.meal_planner import generate_meal_plan
 from modules.genetic_algorithm import run_genetic_algorithm
 from modules.visualization import (
@@ -74,11 +74,16 @@ if st.sidebar.button("Generate Plan"):
     target_calories = calculate_target_calories(tdee, goal)
     macros = calculate_macros(target_calories, weight)
 
+    bmi = weight / ((height / 100) ** 2)
+
     user_data = {
         "age": age,
         "gender": gender,
         "height": height,
         "current_weight": weight,
+        "bmi": bmi,
+        "bmr": bmr,
+        "tdee": tdee,
         "daily_calories": target_calories,
         "activity_level": activity_level,
         "protein": macros["protein"],
@@ -88,6 +93,7 @@ if st.sidebar.button("Generate Plan"):
     }
 
     predicted_weight_change = predict_weight_change(user_data)
+    diet_recommendation = predict_diet_recommendation(user_data)
 
     meal_plan = generate_meal_plan(
         target_calories,
@@ -143,11 +149,31 @@ if st.sidebar.button("Generate Plan"):
     with col6:
         st.metric("Fat", f"{macros['fat']} g")
 
-    st.subheader("Machine Learning Prediction")
-    st.metric(
-        "Predicted Weekly Weight Change",
-        f"{predicted_weight_change:.2f} kg"
-    )
+        
+
+
+
+    st.subheader("Machine Learning Predictions")
+
+    col_ml1, col_ml2, col_ml3 = st.columns(3)
+
+    with col_ml1:
+        st.metric(
+            "Predicted Weekly Weight Change",
+            f"{predicted_weight_change:.2f} kg"
+        )
+
+    with col_ml2:
+        st.metric(
+            "Diet Recommendation",
+            diet_recommendation
+        )
+
+    with col_ml3:
+        st.metric(
+            "BMI",
+            f"{bmi:.1f}"
+        )
 
     st.subheader("Genetic Algorithm Result")
 
