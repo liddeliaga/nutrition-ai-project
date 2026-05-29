@@ -186,7 +186,7 @@ def run_genetic_algorithm(
         "message": "Genetic algorithm completed successfully",
     }
 
-    os.makedirs("outputs", exist_ok=True)
+    os.makedirs(GENERATED_MEAL_PLAN_PATH.parent, exist_ok=True)
     best_plan_df.to_csv(GENERATED_MEAL_PLAN_PATH, index=False)
     pd.DataFrame(history).to_csv(OPTIMIZATION_RESULTS_PATH, index=False)
 

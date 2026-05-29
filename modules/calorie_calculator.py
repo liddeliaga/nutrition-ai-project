@@ -54,7 +54,7 @@ def calculate_macros(target_calories, weight):
     fat_calories = fat * 9
 
     remaining_calories = target_calories - protein_calories - fat_calories
-    carbs = remaining_calories / 4
+    carbs = max(0, remaining_calories) / 4
 
     return {
         "protein": round(protein, 1),

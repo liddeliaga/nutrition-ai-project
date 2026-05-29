@@ -1,7 +1,10 @@
+import os
+import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
 import plotly.express as px
 
+from config import MODEL_RESULTS_PATH
 from modules.calorie_calculator import (
     calculate_bmr, calculate_tdee, calculate_target_calories, calculate_macros,
 )
@@ -676,6 +679,34 @@ elif st.session_state.step == 7:
         }
         weight_change = predict_weight_change(user_data)
         diet_rec      = predict_diet_recommendation(user_data)
+
+        # Save ML results to CSV
+        import datetime
+        ml_row = {
+            "timestamp":          datetime.datetime.now().isoformat(timespec="seconds"),
+            "age":                age,
+            "gender":             gender,
+            "height_cm":          height,
+            "weight_kg":          weight,
+            "activity_level":     activity_level,
+            "goal":               goal,
+            "bmi":                round(bmi, 2),
+            "bmr":                round(bmr, 2),
+            "tdee":               round(tdee, 2),
+            "target_calories":    round(target_cal, 2),
+            "protein_g":          macros["protein"],
+            "carbs_g":            macros["carbs"],
+            "fat_g":              macros["fat"],
+            "predicted_weekly_change_kg": weight_change,
+            "diet_recommendation":        diet_rec,
+        }
+        os.makedirs(MODEL_RESULTS_PATH.parent, exist_ok=True)
+        ml_df = pd.DataFrame([ml_row])
+        if MODEL_RESULTS_PATH.exists():
+            existing = pd.read_csv(MODEL_RESULTS_PATH)
+            ml_df = pd.concat([existing, ml_df], ignore_index=True)
+        ml_df.to_csv(MODEL_RESULTS_PATH, index=False)
+
         meal_plan, ga_result = run_genetic_algorithm(
             targets={"calories": target_cal, "protein": macros["protein"],
                      "carbs": macros["carbs"], "fat": macros["fat"]},
@@ -747,6 +778,15 @@ elif st.session_state.step == 7:
             t2.metric("Protein",  f"{plan_prot:.1f} g", delta=f"{plan_prot - macros['protein']:+.1f}")
             t3.metric("Carbs",    f"{plan_carb:.1f} g", delta=f"{plan_carb - macros['carbs']:+.1f}")
             t4.metric("Fat",      f"{plan_fat:.1f} g",  delta=f"{plan_fat - macros['fat']:+.1f}")
+            st.divider()
+            st.download_button(
+                label="⬇️ Download Meal Plan (CSV)",
+                data=meal_plan.to_csv(index=False).encode("utf-8"),
+                file_name="meal_plan.csv",
+                mime="text/csv",
+                type="primary",
+                width="stretch",
+            )
 
     # ── Charts ────────────────────────────────────────────────────────────────
     with tab3:
