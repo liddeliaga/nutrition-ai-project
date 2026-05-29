@@ -702,9 +702,12 @@ elif st.session_state.step == 7:
         }
         os.makedirs(MODEL_RESULTS_PATH.parent, exist_ok=True)
         ml_df = pd.DataFrame([ml_row])
-        if MODEL_RESULTS_PATH.exists():
-            existing = pd.read_csv(MODEL_RESULTS_PATH)
-            ml_df = pd.concat([existing, ml_df], ignore_index=True)
+        if MODEL_RESULTS_PATH.exists() and MODEL_RESULTS_PATH.stat().st_size > 0:
+            try:
+                existing = pd.read_csv(MODEL_RESULTS_PATH)
+                ml_df = pd.concat([existing, ml_df], ignore_index=True)
+            except Exception:
+                pass
         ml_df.to_csv(MODEL_RESULTS_PATH, index=False)
 
         meal_plan, ga_result = run_genetic_algorithm(
